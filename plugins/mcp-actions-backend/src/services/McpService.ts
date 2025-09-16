@@ -87,10 +87,16 @@ export class McpService {
           // and we return it as json text instead for now.
           content: [
             {
-              type: 'text',
-              text: ['```json', JSON.stringify(output, null, 2), '```'].join(
-                '\n',
-              ),
+              type: (output as any)?.type === 'image' ? 'image' : 'text',
+              ...((output as any)?.type === 'image'
+                ? { data: (output as any).data }
+                : {
+                    text: [
+                      '```json',
+                      JSON.stringify(output, null, 2),
+                      '```',
+                    ].join('\n'),
+                  }),
             },
           ],
         };
