@@ -37,7 +37,7 @@ export class McpService {
     const server = new McpServer(
       {
         name: 'backstage',
-        // TODO: this version will most likely change in the future.
+        // TODO: this version will most likely change isrn the future.
         version,
       },
       { capabilities: { tools: {} } },
@@ -89,7 +89,10 @@ export class McpService {
             {
               type: (output as any)?.type === 'image' ? 'image' : 'text',
               ...((output as any)?.type === 'image'
-                ? { data: (output as any).data }
+                ? {
+                    data: (output as any).data,
+                    mimeType: 'image/png',
+                  }
                 : {
                     text: [
                       '```json',

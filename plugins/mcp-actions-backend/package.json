@@ -19,8 +19,8 @@
     "directory": "plugins/mcp-actions-backend"
   },
   "license": "Apache-2.0",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "dist/index.cjs.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
