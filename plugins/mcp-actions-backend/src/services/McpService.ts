@@ -19,12 +19,24 @@ import {
   ListToolsRequestSchema,
   CallToolRequestSchema,
 } from '@modelcontextprotocol/sdk/types.js';
-import { JsonObject } from '@backstage/types';
+import { JsonObject, JsonValue } from '@backstage/types';
 import { ActionsService } from '@backstage/backend-plugin-api/alpha';
 import { version } from '@backstage/plugin-mcp-actions-backend/package.json';
 import { NotFoundError } from '@backstage/errors';
 
 import { handleErrors } from './handleErrors';
+
+// Type guard to check if a JsonValue is a JsonObject
+function isJsonObject(value: JsonValue): value is JsonObject {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+// Type guard to check if a JsonObject has a type field equal to 'image'
+function isImageOutput(
+  obj: JsonObject,
+): obj is JsonObject & { type: 'image'; data: JsonValue } {
+  return obj.type === 'image';
+}
 
 export class McpService {
   constructor(private readonly actions: ActionsService) {}
@@ -81,16 +93,19 @@ export class McpService {
           credentials,
         });
 
+        // Check if output is a JsonObject with type 'image'
+        const isImageType = isJsonObject(output) && isImageOutput(output);
+
         return {
           // todo(blam): unfortunately structuredContent is not supported by most clients yet.
           // so the validation for the output happens in the default actions registry
           // and we return it as json text instead for now.
           content: [
             {
-              type: (output as any)?.type === 'image' ? 'image' : 'text',
-              ...((output as any)?.type === 'image'
+              type: isImageType ? 'image' : 'text',
+              ...(isImageType
                 ? {
-                    data: (output as any).data,
+                    data: output.data,
                     mimeType: 'image/png',
                   }
                 : {
