@@ -5690,26 +5690,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@backstage/plugin-mcp-actions-backend@workspace:^, @backstage/plugin-mcp-actions-backend@workspace:plugins/mcp-actions-backend":
-  version: 0.0.0-use.local
-  resolution: "@backstage/plugin-mcp-actions-backend@workspace:plugins/mcp-actions-backend"
-  dependencies:
-    "@backstage/backend-defaults": "workspace:^"
-    "@backstage/backend-plugin-api": "workspace:^"
-    "@backstage/backend-test-utils": "workspace:^"
-    "@backstage/catalog-client": "workspace:^"
-    "@backstage/cli": "workspace:^"
-    "@backstage/errors": "workspace:^"
-    "@backstage/plugin-catalog-node": "workspace:^"
-    "@backstage/types": "workspace:^"
-    "@modelcontextprotocol/sdk": "npm:^1.12.3"
-    "@types/express": "npm:^4.17.6"
-    express: "npm:^4.17.1"
-    express-promise-router: "npm:^4.1.0"
-    zod: "npm:^3.22.4"
-  languageName: unknown
-  linkType: soft
-
 "@backstage/plugin-notifications-backend-module-email@workspace:plugins/notifications-backend-module-email":
   version: 0.0.0-use.local
   resolution: "@backstage/plugin-notifications-backend-module-email@workspace:plugins/notifications-backend-module-email"
@@ -8068,6 +8048,26 @@ __metadata:
   checksum: 10/647d4427f6aad119bdfea607ab19ca30be827f7f0462677b5a538d8f8ab4ebda2c05ece60fceb5d3abb093e69ab3393e24a8e966936d2745b07421cfd014b14f
   languageName: node
   linkType: hard
+
+"@devhub-community/plugin-mcp-actions-backend@workspace:^, @devhub-community/plugin-mcp-actions-backend@workspace:plugins/mcp-actions-backend":
+  version: 0.0.0-use.local
+  resolution: "@devhub-community/plugin-mcp-actions-backend@workspace:plugins/mcp-actions-backend"
+  dependencies:
+    "@backstage/backend-defaults": "workspace:^"
+    "@backstage/backend-plugin-api": "workspace:^"
+    "@backstage/backend-test-utils": "workspace:^"
+    "@backstage/catalog-client": "workspace:^"
+    "@backstage/cli": "workspace:^"
+    "@backstage/errors": "workspace:^"
+    "@backstage/plugin-catalog-node": "workspace:^"
+    "@backstage/types": "workspace:^"
+    "@modelcontextprotocol/sdk": "npm:^1.12.3"
+    "@types/express": "npm:^4.17.6"
+    express: "npm:^4.17.1"
+    express-promise-router: "npm:^4.1.0"
+    zod: "npm:^3.22.4"
+  languageName: unknown
+  linkType: soft
 
 "@elastic/elasticsearch-mock@npm:^1.0.0":
   version: 1.0.0
@@ -29755,7 +29755,6 @@ __metadata:
     "@backstage/plugin-events-backend": "workspace:^"
     "@backstage/plugin-events-backend-module-google-pubsub": "workspace:^"
     "@backstage/plugin-kubernetes-backend": "workspace:^"
-    "@backstage/plugin-mcp-actions-backend": "workspace:^"
     "@backstage/plugin-notifications-backend": "workspace:^"
     "@backstage/plugin-permission-backend": "workspace:^"
     "@backstage/plugin-permission-backend-module-allow-all-policy": "workspace:^"
@@ -29772,6 +29771,7 @@ __metadata:
     "@backstage/plugin-search-backend-node": "workspace:^"
     "@backstage/plugin-signals-backend": "workspace:^"
     "@backstage/plugin-techdocs-backend": "workspace:^"
+    "@devhub-community/plugin-mcp-actions-backend": "workspace:^"
     "@opentelemetry/auto-instrumentations-node": "npm:^0.61.0"
     "@opentelemetry/exporter-prometheus": "npm:^0.54.0"
     "@opentelemetry/sdk-node": "npm:^0.54.0"
