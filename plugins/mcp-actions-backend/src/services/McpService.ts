@@ -21,7 +21,7 @@ import {
 } from '@modelcontextprotocol/sdk/types.js';
 import { JsonObject, JsonValue } from '@backstage/types';
 import { ActionsService } from '@backstage/backend-plugin-api/alpha';
-import { version } from '@backstage/plugin-mcp-actions-backend/package.json';
+import { version } from '@devhub-community/plugin-mcp-actions-backend/package.json';
 import { NotFoundError } from '@backstage/errors';
 
 import { handleErrors } from './handleErrors';

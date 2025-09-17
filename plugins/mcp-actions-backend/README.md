@@ -158,3 +158,8 @@ There's a few different ways to configure MCP tools, but here's a snippet of the
 This plugin backend can be started in a standalone mode from directly in this package with `yarn start`. It is a limited setup that is most convenient when developing the plugin backend itself.
 
 If you want to run the entire project, including the frontend, run `yarn start` from the root directory.
+
+## Publishing the package
+
+1. Yarn build
+2. npm publish
