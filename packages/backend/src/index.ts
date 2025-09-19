@@ -63,5 +63,5 @@ backend.add(import('@backstage/plugin-notifications-backend'));
 backend.add(import('./instanceMetadata'));
 
 backend.add(import('@backstage/plugin-events-backend-module-google-pubsub'));
-backend.add(import('@devhub-community/plugin-mcp-actions-backend'));
+backend.add(import('@backstage/plugin-mcp-actions-backend'));
 backend.start();

@@ -21,7 +21,7 @@ import {
 } from '@modelcontextprotocol/sdk/types.js';
 import { JsonObject, JsonValue } from '@backstage/types';
 import { ActionsService } from '@backstage/backend-plugin-api/alpha';
-import { version } from '@devhub-community/plugin-mcp-actions-backend/package.json';
+import { version } from '@backstage/plugin-mcp-actions-backend/package.json';
 import { NotFoundError } from '@backstage/errors';
 
 import { handleErrors } from './handleErrors';
@@ -97,9 +97,7 @@ export class McpService {
         const isImageType = isJsonObject(output) && isImageOutput(output);
 
         return {
-          // todo(blam): unfortunately structuredContent is not supported by most clients yet.
-          // so the validation for the output happens in the default actions registry
-          // and we return it as json text instead for now.
+          // for the moment adding support to image type since clients are now able to render the images
           content: [
             {
               type: isImageType ? 'image' : 'text',

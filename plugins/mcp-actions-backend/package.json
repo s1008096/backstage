@@ -1,11 +1,11 @@
 {
-  "name": "@devhub-community/plugin-mcp-actions-backend",
+  "name": "@backstage/plugin-mcp-actions-backend",
   "version": "0.1.3",
   "backstage": {
     "role": "backend-plugin",
     "pluginId": "mcp-actions",
     "pluginPackages": [
-      "@devhub-community/plugin-mcp-actions-backend"
+      "@backstage/plugin-mcp-actions-backend"
     ],
     "features": {
       ".": "@backstage/BackendFeature"
@@ -14,24 +14,16 @@
   "publishConfig": {
     "access": "public",
     "main": "dist/index.cjs.js",
-    "registry": "https://packages.internal.bunnings.com.au/npm/devhub/",
     "types": "dist/index.d.ts"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/s1008096/backstage",
+    "url": "https://github.com/backstage/backstage",
     "directory": "plugins/mcp-actions-backend"
   },
   "license": "Apache-2.0",
-  "main": "dist/index.cjs.js",
-  "types": "dist/index.d.ts",
-  "typesVersions": {
-    "*": {
-      "package.json": [
-        "package.json"
-      ]
-    }
-  },
+  "main": "src/index.ts",
+  "types": "src/index.ts",
   "files": [
     "dist"
   ],
