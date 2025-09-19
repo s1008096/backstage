@@ -6,10 +6,7 @@
     "pluginId": "mcp-actions",
     "pluginPackages": [
       "@backstage/plugin-mcp-actions-backend"
-    ],
-    "features": {
-      ".": "@backstage/BackendFeature"
-    }
+    ]
   },
   "publishConfig": {
     "access": "public",
